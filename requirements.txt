@@ -1,0 +1,10 @@
+torch
+numpy
+sentence-transformers
+faiss-cpu
+transformers
+pymupdf
+tqdm
+jupyter
+streamlit
+ollama
