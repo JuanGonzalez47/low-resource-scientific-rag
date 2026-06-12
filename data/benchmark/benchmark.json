@@ -1,0 +1,212 @@
+[
+{
+"query": "what is the mathematical formulation of residual functions with reference to layer inputs?",
+"relevant_paper_id": "1512.03385v1",
+"answer_contains": "we explicitly reformulate the layers as learning residual functions with reference to the layer inputs",
+"difficulty": "easy",
+"note": "El término residual functions es central y explícito en el resumen."
+},
+{
+"query": "how do you compute dot product attention scores across different representation subspaces?",
+"relevant_paper_id": "AttentionIsAllYouNeed",
+"answer_contains": "multi-head attention allows the model to jointly attend to information from different representation subspaces",
+"difficulty": "easy",
+"note": "La consulta utiliza la terminología exacta encontrada en la sección de atención."
+},
+{
+"query": "what is the specific denoising objective used for sequence to sequence pretraining?",
+"relevant_paper_id": "1910.13461v1",
+"answer_contains": "BART is trained by corrupting text with an arbitrary noising function",
+"difficulty": "easy",
+"note": "La consulta refleja directamente el objetivo de preentrenamiento descrito en el abstract."
+},
+{
+"query": "how does the windowing technique reduce data transfer from flash memory?",
+"relevant_paper_id": "2312.11514v3",
+"answer_contains": "windowing strategically reduces data transfer by reusing previously activated neurons",
+"difficulty": "easy",
+"note": "Es una definición directa proporcionada en el resumen del artículo."
+},
+{
+"query": "what is the primary advantage of removing padding tokens during model training?",
+"relevant_paper_id": "2312.17482v2",
+"answer_contains": "dynamically remove padded tokens and low precision LayerNorm into the classic transformer encoder block",
+"difficulty": "easy",
+"note": "Es una técnica citada explícitamente como parte de la optimización del modelo."
+},
+{
+"query": "how does the multi-encoder transformer utilize heterogeneous methods to improve translation?",
+"relevant_paper_id": "2312.15872v1",
+"answer_contains": "our approach can improve the quality of the translation across a variety of languages",
+"difficulty": "easy",
+"note": "La consulta pregunta por el resultado principal mencionado en el abstract."
+},
+{
+"query": "which architecture drops mlp and attention layers to reduce inference latency?",
+"relevant_paper_id": "2407.15516v1",
+"answer_contains": "investigate the effect of dropping mlp and attention layers at inference time",
+"difficulty": "easy",
+"note": "Se pregunta directamente por el método principal estudiado en el paper."
+},
+{
+"query": "how does pca compression affect index size in retrieval augmented generation?",
+"relevant_paper_id": "2504.08386v1",
+"answer_contains": "a 28.6x reduction in index size with only moderate declines in correlation metrics",
+"difficulty": "easy",
+"note": "Los valores cuantitativos aparecen directamente en el texto."
+},
+{
+"query": "what is the main characteristic of the yolo26 end to end architecture?",
+"relevant_paper_id": "2606.03748v1",
+"answer_contains": "unified real-time end-to-end vision models",
+"difficulty": "easy",
+"note": "Es parte del título descriptivo y la definición del modelo."
+},
+{
+"query": "how does the encoder lstm map input sequences into fixed length representations?",
+"relevant_paper_id": "1502.04681v3",
+"answer_contains": "model uses an encoder lstm to map an input sequence into a fixed length representation",
+"difficulty": "easy",
+"note": "La consulta sigue la estructura sintáctica exacta del paper."
+},
+{
+"query": "how does skipping attention layers affect performance compared to skipping mlp layers?",
+"relevant_paper_id": "2407.15516v1",
+"answer_contains": "skipping layers except the latter layers reduces performances for more layers skipped",
+"difficulty": "medium",
+"note": "Requiere comprender la diferencia de impacto entre tipos de capas."
+},
+{
+"query": "why is the combination of different deep learning approaches preferred over homogeneous configurations?",
+"relevant_paper_id": "2312.15872v1",
+"answer_contains": "although the transformer is currently the best-performing architecture in the homogeneous configuration",
+"difficulty": "medium",
+"note": "Requiere parafrasear la comparación entre arquitecturas homogéneas y heterogéneas."
+},
+{
+"query": "what is the role of denoising autoencoders in modern sequence to sequence models?",
+"relevant_paper_id": "1910.13461v1",
+"answer_contains": "BART, a denoising autoencoder for pretraining sequence-to-sequence models",
+"difficulty": "medium",
+"note": "Requiere identificar que BART es un caso de uso de este concepto."
+},
+{
+"query": "how do identity shortcuts influence training error in deep convolutional architectures?",
+"relevant_paper_id": "1512.03385v1",
+"answer_contains": "residual networks are easier to optimize and can gain accuracy from considerably increased depth",
+"difficulty": "medium",
+"note": "Requiere conectar la teoría del atajo con el resultado empírico de optimización."
+},
+{
+"query": "can recurrent structures be replaced by attention mechanisms for sequence transduction?",
+"relevant_paper_id": "AttentionIsAllYouNeed",
+"answer_contains": "based solely on attention mechanisms dispensing with recurrence and convolutions entirely",
+"difficulty": "medium",
+"note": "La query generaliza el concepto de reemplazo de arquitectura."
+},
+{
+"query": "how can memory capacity constraints be managed by accessing external storage during inference?",
+"relevant_paper_id": "2312.11514v3",
+"answer_contains": "running llms that exceed the available dram capacity by storing the model parameters in flash memory",
+"difficulty": "medium",
+"note": "Requiere relacionar las restricciones de memoria con la solución de almacenamiento externo."
+},
+{
+"query": "what architectural optimizations lead to faster pretraining in encoder based models?",
+"relevant_paper_id": "2312.17482v2",
+"answer_contains": "a bert-style encoder architecture and training recipe that is empirically optimized for fast pretraining",
+"difficulty": "medium",
+"note": "La query es amplia y requiere buscar el propósito del paper."
+},
+{
+"query": "how are video frame patches used to reconstruct sequences in deep architectures?",
+"relevant_paper_id": "1502.04681v3",
+"answer_contains": "model uses an encoder lstm to map an input sequence into a fixed length representation",
+"difficulty": "medium",
+"note": "Requiere conectar parches de video con la reconstrucción mediante codificadores."
+},
+{
+"query": "is dimensionality reduction via pca feasible for high performance retrieval systems?",
+"relevant_paper_id": "2504.08386v1",
+"answer_contains": "reducing vectors from 3,072 to 110 dimensions provides a sizeable speedup in retrieval operations",
+"difficulty": "medium",
+"note": "Requiere evaluar la viabilidad mencionada en la conclusión del paper."
+},
+{
+"query": "what approach allows object detection models to operate without non maximum suppression?",
+"relevant_paper_id": "2606.03748v1",
+"answer_contains": "unified real-time end-to-end vision models",
+"difficulty": "medium",
+"note": "Requiere inferir que el sistema end-to-end implica la eliminación de NMS."
+},
+{
+"query": "how does the input noise strategy affect the reconstruction quality in transformer models?",
+"relevant_paper_id": "1910.13461v1",
+"answer_contains": "evaluating a number of noising approaches finding the best performance by both randomly shuffling",
+"difficulty": "medium",
+"note": "Requiere relacionar el ruido con la calidad de reconstrucción mencionada."
+},
+{
+"query": "are deeper layers always beneficial for model performance during sequence transduction?",
+"relevant_paper_id": "2407.15516v1",
+"answer_contains": "dropping deeper attention layers only marginally decreases performance",
+"difficulty": "medium",
+"note": "La query plantea una duda que el paper resuelve mediante ablación."
+},
+{
+"query": "how can memory limitations be overcome when deploying extremely deep networks?",
+"relevant_paper_id": "1512.03385v1",
+"answer_contains": "residual networks are easier to optimize and can gain accuracy from considerably increased depth",
+"difficulty": "hard",
+"note": "Confunde técnicas de eficiencia de hardware con profundidad de arquitectura."
+},
+{
+"query": "does attention based transduction require external memory components to function properly?",
+"relevant_paper_id": "2312.11514v3",
+"answer_contains": "storing the model parameters in flash memory but bringing them on demand to dram",
+"difficulty": "hard",
+"note": "Confunde el mecanismo de atención con la necesidad de hardware externo."
+},
+{
+"query": "what is the impact of heterogeneous encoding strategies on translation BLEU scores?",
+"relevant_paper_id": "2312.15872v1",
+"answer_contains": "maximum increase of 7.16 bleu compared to the single-encoder model",
+"difficulty": "hard",
+"note": "La respuesta es cuantitativa y está enterrada en el texto del abstract."
+},
+{
+"query": "how does data transfer efficiency relate to the architecture of encoder layers?",
+"relevant_paper_id": "2312.17482v2",
+"answer_contains": "a module to dynamically remove padded tokens and low precision layernorm",
+"difficulty": "hard",
+"note": "Es confuso porque la transferencia de datos y la arquitectura suelen tratarse por separado."
+},
+{
+"query": "is the reconstruction of future video frames equivalent to supervised action recognition?",
+"relevant_paper_id": "1502.04681v3",
+"answer_contains": "evaluate the representations by fine-tuning them for a supervised learning problem",
+"difficulty": "hard",
+"note": "La pregunta obliga a distinguir entre aprendizaje no supervisado y supervisado."
+},
+{
+"query": "what is the relationship between dimensionality reduction and retrieval precision in large databases?",
+"relevant_paper_id": "2504.08386v1",
+"answer_contains": "mitigating computational bottlenecks without incurring large accuracy losses",
+"difficulty": "hard",
+"note": "La query es abstracta y ambigua, obligando a buscar resultados de compromiso."
+},
+{
+"query": "are end to end object detection architectures fundamentally different from traditional region based methods?",
+"relevant_paper_id": "2606.03748v1",
+"answer_contains": "unified real-time end-to-end vision models",
+"difficulty": "hard",
+"note": "Requiere interpretar la superioridad del modelo propuesto sobre métodos tradicionales."
+},
+{
+"query": "why do global dependencies in transduction necessitate abandoning recurrence?",
+"relevant_paper_id": "AttentionIsAllYouNeed",
+"answer_contains": "based solely on attention mechanisms dispensing with recurrence and convolutions entirely",
+"difficulty": "hard",
+"note": "Requiere justificar una decisión arquitectónica basada en el problema de dependencias."
+}
+]
