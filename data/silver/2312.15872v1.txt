@@ -1,0 +1,697 @@
+Heterogeneous Encoders Scaling In The Transformer For Neural
+Machine Translation
+Jia Cheng Hu, Roberto Cavicchioli, Giulia Berardinelli, and Alessandro Capotondi
+University of Modena and Reggio Emilia
+Department of Physics, Informatics and Mathematics
+name.surname@unimore.it
+Abstract
+Although the Transformer is currently the best-performing architecture in the homogeneous configuration (self-attention only) in Neural Machine Translation, many State-ofthe-Art models in Natural Language Processing are made of a combination of different Deep
+Learning approaches. However, these models often focus on combining a couple of techniques
+only and it is unclear why some methods are chosen over others. In this work, we investigate the effectiveness of integrating an increasing number of heterogeneous methods. Based
+on a simple combination strategy and performance-driven synergy criteria, we designed the
+Multi-Encoder Transformer, which consists of up to five diverse encoders. Results showcased
+that our approach can improve the quality of the translation across a variety of languages
+and dataset sizes and it is particularly effective in low-resource languages where we observed
+a maximum increase of 7.16 BLEU compared to the single-encoder model.
+
+Introduction
+Neural Machine Translation (NMT), in Natural Language Processing (NLP), describes the problem of automatically translating a text sentence from one language into another using Neural
+Networks. Over the past years, translation systems performed increasingly better thanks to the
+design of more sophisticated and effective models. Models consist of an encoder that extracts a
+representation from the input sequence in the source language and a decoder that generates the
+same sentence in the target language.
+There are currently several types of neural processing methods.
+The most popular ones
+consist of self-attentive networks (SANs or ANNs) [31], recurrent neural networks [15] (RNNs)
+and convolutional (CNN) ones [37, 3, 6]. More recently, the works of [17] and [11, 10] proposed
+two additional variants. These methods differ in the way they process a sequence: for instance,
+recurrent neural networks [15] apply the same operation over the sequence in a sequential manner
+and each element is given access to the previous ones thanks to one or two hidden states. Selfattentive neural networks [31] instead, make use of the Attention mechanism [1, 21], a method
+that constructs representations made of the Softmax-weighted sum of all the elements in the
+
+sequence. Each of these approaches presents advantages and drawbacks on its own. For instance,
+RNNs better capture the sequentiality in the data compared to stateless methods [12], such as
+CNNs and SANs, that rely on simple numeric encodings. However, as a drawback, the first
+suffers from computational limitations and a limited receptive field.
+In the presence of a variety of possible processing strategies, State-of-the-Art models often
+leverage the strength of a combination of multiple approaches in both NLP [4, 8, 35, 16, 7]
+and Vision [10, 12].
+The effectiveness of hybrid models outlines the benefits of introducing
+heterogeneous ways of processing inside the same architecture. However, often in these architectures, only two methods are considered and to the best of our knowledge, little has been
+done on the combination of a larger number of heterogeneous encoding methods. Additionally,
+different techniques in State-of-the-Art models are often closely intertwined in one single processing block. As a matter of fact, there is a lack of consensus on how to combine effectively
+each technique. This type of integration approach is limiting in terms of applicability since not
+all encoding strategies can be easily combined. For instance, in a single encoder architecture,
+combining either the convolution or the self-attention with recurrent methods ultimately results
+in a recurrent encoder.
+In this work, we propose an investigation into the effectiveness of combining an increasing
+number of diverse neural network processing methods. In particular, we adopt the Transformer
+decoder [31] and an encoder that is made of an increasing number of heterogeneous methods.
+Moreover, we propose a very simple encoder combination strategy such as the simple sum. On
+one hand, it is bound to be less performing than ad-hoc hybrid designs.
+On the other, its
+simplicity enables the addition of an arbitrary number of independent and diverse encoders.
+The paper is organized as follows. Section 2 presents related works and several encoding
+techniques. Then, in Section 3, we introduce the Multi-Encoder Transformer, which encoder
+combines up to five processing methods: Self-Attention, Convolutional, LSTM, Fourier Transform (FNet), and Static Expansion. In Section 4, we present five translation datasets on which
+our models are trained and tested. Finally, in Section 5, we present the results and discuss the
+advantages and limitations of our multi-encoder transformer. In particular, we discover that
+different methods synergize differently when combined with each other and that low-resource
+languages benefit the most from the increase in the number of heterogeneous encoders.
+In summary, our contributions are as follows: (i) we analyze the effectiveness of simply
+summing multiple encoding strategies in the Transformer, in particular adopting the RNN, CNN,
+SAN, Static Expansion and Fourier Transform (FNet) across a variety of Language translation
+tasks; (ii) we analyze the synergies of the five processing methods and design a dual-encoder,
+triple encoder, quadruple and quintuple encoder based upon the results; (iii) we show that the
+multi-encoding achieves better performances with respect to the baseline Transformer, despite
+each encoder presenting a poorer performance in the single instance; (iv) we show that lowresource languages are those that benefit the most from combining heterogeneous encoders.
+
+Related Works
+Many works in several research fields explored the benefits of combining multiple, sometimes
+complementary, encoding strategies. QRNNs [3] tackled the computational burden of RNNs
+
+and proposed to exploit the efficiency of the convolution operation while preserving the strong
+sequential awareness using recurrent pooling layers in various NLP tasks. In Neural Machine
+Translation [4] integrated the self-attention layer in the GNMT [34], a full RNN network based
+on stacks of LSTM networks [9]. Conversely, [8] explored the opposite solution and integrated
+the LSTM inside the Transformer. The works of [33] and [35] merged the self-attention method
+and convolution on a deep level, forming a moving window in which relationship among sequence
+tokens are extracted on a local level instead of a global one. On a similar level, in Audio Speech
+Recognition, best-performing architectures such as the Conformer [7] and SqueezeFormer [16]
+rely on a combination of convolution layers and self-attentive blocks to capture both local and
+global correlations respectively in the spectrum representation. Similar ideas were applied in
+other tasks such as Reading Comprehension [36] and Image Classification [5]. The adoption of
+multiple encoders is natural for some problems, such as those involving multiple input sequences
+[30, 13] which also led to the investigation of optimal interconnection between the encoders and
+the decoder [18, 8, 4]. Also, the scalability of Transformers has been deeply investigated in a
+variety of contexts [32, 14, 19, 25, 2] which mostly focus on increasing the number of layers or
+sequence length.
+In contrast to these works, our work is the only one that investigates the effectiveness of
+increasing the number of heterogeneous encoding methods in the Transformer and present hybrid
+architectures made of an unprecedented number of strategies.
+
+Heterogeneous Multi-Encoder
+3.1
+Encoding Strategies
+Given the input sequence X = {x1, x2, . . . , xN}, xi ∈Rd and d the hidden dimension, we describe
+five encoding strategies based on recurrency, convolution, self-attention, Fourier transform and
+static expansion.
+LSTM. Recurrent Neural Networks are sequence modelling methods inspired by recurrent
+functions, which output at time step t ∈{1, 2, . . . , N} are affected by all the input of the
+previous steps by means of the hidden states. The hidden state consists of one or multiple
+vectors depending on the architecture. In this work, we consider the LSTM [9] encoder whose
+formula is showcased below:
+
+
+
+
+
+
+
+
+ft = sigmoid(Wfxt−1 + Ufht−1 + bf)
+it = sigmoid(Wixt−1 + Uiht−1 + bi)
+ot = sigmoid(Woxt−1 + Uoht−1 + bo)
+zt = tanh(Wcxt−1 + Ucht−1 + bc)
+ct = ft ⊙ct−1 + it ⊙zt
+ht = ot ⊙tanh(ct)
+
+
+
+
+
+
+
+where W, U ∈R4·d×d, b ∈R4·d and ft, it, ot are the forget, input, output gates, whereas
+ht, ct represent the hidden states. We restrict to the uni-directional formulation because the
+bidirectional processing of the input is already provided by the bidirectional nature of selfattention, which supports the goal of experimenting with diverse encoding strategies.
+
+ConvS2S. Convolution networks were partially introduced in Natural Language Processing
+to overcome the computational inefficiency of recurrent models [3] but later proved to be an
+effective alternative to other sequence modelling architectures and are even able to achieve
+State-of-the-Art performances [6, 35, 20, 33].
+In this work, we will focus on the ConvS2S
+encoder [6]. Similar to the Vision case, its working principle lies in the filter banks learning
+the local and most simple semantics among elements in the sequence during earlier stages and
+extracting longer and more complex relationships in the higher-order layers. Given an input
+sequence X and an odd kernel size k, the encoder is made of a set of filters W ∈R2·k×2·d that
+perform the convolution operation for each time step t = {1, 2, . . . , N} in the input sequence.
+The output dimension is twice the model dimension in order to be fed into the GLU function,
+which represents the non-linear component of the layer:
+GLU(a, b) = a ⊗sigmoid(b)
+where a, b ∈Rd are the two halves of the output vector.
+Self-Attention. The attention mechanism was first introduced in NLP in [1], and it was
+applied to recurrent models drastically improving the performances by allowing the encoder
+information to be distributed on each encoder input rather than one single state vector. The
+method was later refined in [21] and the two works provided the foundation of the Transformer
+[31]. Its main component, the self-attentive layer, consists of the following operations (considering the single-head case):
+Self-Attention(Q, K, V ) = softmax(QKT
+√
+d
+)V
+where Q, K, V ∈RN×d are linear projections of the same input. The method has been proven
+to be able to extract the syntax and semantics as well as capture long-range relationships of the
+sequence thanks to the global and bidirectional access to the whole input right at the first stage
+of the network compared to the previous method.
+Static Expansion. The Static Expansion [10] proposes to distribute the sequence into an
+arbitrary number of elements. In its essence, the idea consists of a Forward phase where the
+input of length is transformed into a new sequence one featuring a new target length, and a
+Backward where it’s transformed back to the original one. In practice, the input is linearly
+projected four times, producing K, VA, VB, S ∈RN×d. Given the desired length NE, 2 · NE
+expansion vectors are considered, denoted as EQ, EB ∈RNE×d. The static expansion layer
+performs three operations.
+(i). First, the dot product similarity is computed between the expanded queries and the
+keys obtaining the length transformation matrix L:
+L = EQK⊺
+√
+d
+(1)
+The result is fed into a ReLU function and normalized. The sequences featuring new lengths
+are computed in the following way:
+P fw
+i
+= Ψ(ReLU((−1)i+1L), ε)
+i ∈1, 2
+F fw
+i
+= P fw
+i
+(Vi + Ei)
+i ∈1, 2
+(2)
+
+Ψ : (X, ε) →Y , X, Y ∈RN1×N2 is the normalization function and ε ∈R>0 the coefficient
+ensuring numeric stability.
+(ii). Using the same matrix of Equation 1, the sequence is transformed back to its original
+length (Backward step):
+P bw
+i
+= Ψ(ReLU((−1)i+1L⊺), ε)
+i ∈1, 2
+Bbw
+i
+= ReLU(P bw
+i
+F fw
+i
+)
+i ∈1, 2
+(3)
+(iii). The two results are combined through a sigmoid gate (sigmoid function indicated with
+σ):
+out = σ(C) ⊙Bbw
+
++ (1 −σ(C)) ⊙Bbw
+
+(4)
+It can be seen in the first version of the Static Expansion, the collection of 2 · NE expansion
+vectors are learnable parameters of size d. Since the original formulation was developed for
+Image Captioning instead of NLP tasks, we enrich the formulation by providing each expansion
+vector more awareness about the sequence by feeding them into a bilinear projection described
+as:
+E
+′
+Q = EQ(X⊺(WX)
+√
+T
+)
+E
+′
+B = EB(X⊺(WX)
+√
+T
+)
+(5)
+where X ∈RT×d is the input sequence, W ∈Rd×d and EQ, EB ∈RNE×d are learnable weights.
+FNet layer. The Fourier Transform describes a mathematical operation that converts a
+function defined in the time domain into its spectral representation. In particular, it extracts
+the coefficients of its sinusoidal components localized in the frequency domain. The Discrete
+Fourier Transform consists of the discrete formulation which is designed to address discontinuous
+and sampled signals. In [17] they adopt such a method and replace the self-attention in BERT,
+achieving remarkably close performances despite a parameter-less formulation.
+The discrete
+Fourier transform is defined as:
+N−1
+X
+t=0
+xt+1e−2πi
+fk+1 =
+N tk,
+0 ≤k ≤N −1
+which is denoted in vector form as F(X) ∈CN×d. The FNet layer is made of two DFTs applied
+over the sequence dimension first and then over the hidden dimension, finally only the real part
+of the results is preserved:
+FFNet(X) = Re(Fd(FN(X)))
+The mixing of tokens along the two dimensions efficiently provides enough accessibility of the
+sequence to the higher order units, such as non-linear projections, in order to form meaningful
+compositions of its elements.
+
+Figure 1: Multi-Encoder Transformer.
+3.2
+Multi-Encoder Transformer
+The Multi-Encoder Transformer is made of the Transformer itself and multiple encoding blocks
+joined together by means of a simple sum or concatenation as depicted in Figure 1. Encoder
+blocks, depicted in Figure 1, consist possibly of a stack of convolution filters, self-attentive layers,
+LSTMs, Fnet layer, or static expansion. All of them include skip-connections and normalization
+layers, with the exception of the LSTM for the first and ConvS2S for the latter.
+The computational burden of the additional encoder is mitigated by the absence, in almost
+all cases, of the Feed-Forward layer which represents one of the computational bottlenecks of
+the transformer model. The only two exceptions are the baseline Transformer encoder, where
+the component is kept to maintain consistency with the original formulation, and Fnet layers, in
+which the Feed-Forward is necessary for the otherwise parameter-less definition of the module.
+
+Experimental setup
+4.1
+Datasets
+We used five datasets in our experiments. The IWSLT 2015 English-Vietnamese (En-Vi) corpus,
+the IWSLT 2017 English-Italian (En-It) corpus, two TED talks in Galician-English (Gl-En),
+Slovak-English (Sk-En) and a Spain-English (Sp-En) corpus provided by the European Language
+Resource Coordination (ELRC). We denote the case of “Gl-En” and “Sp-En” as low-resource
+language setups. Low-resource languages commonly refer to less studied, re-source scarce, and
+less commonly taught languages among other definitions [22].
+In our work, we denote lowresource languages as those that involve less than 30,000 training pairs.
+Sequences whose post-tokenization length is greater than a certain threshold are discarded,
+which results in a negligible smaller training size but a notably smaller peak GPU memory
+footprint. In all training instances, the target and the source language vocabulary are shared.
+
+Source
+Language Pair
+Total num. pairs
+Max epoch
+Vocab. size
+Training max. length
+TED Talks
+Gl-En
+10017
+
+4139
+
+ELRC
+Sp-En
+21007
+
+4288
+
+TED Talks
+Sk-En
+61470
+
+4232
+
+IWSLT15
+En-Vi
+133317
+
+4384
+
+IWSLT17
+En-It
+231619
+
+4246
+
+Table 1:
+Data size and training configuration for each translation task.
+Each vocabulary is created using the BPE algorithm [29]. The maximum number of epochs
+is chosen based on the number of training steps required for the validation accuracy to start
+decreasing. For instance, the En-It training requires significantly fewer epochs than En-Vi most
+likely because of a higher similarity between source and target languages. More Details are
+reported in Table 1.
+4.2
+Models
+The baseline model denoted as “Base” consists of the Transformer with 6 layers, d=512, num heads=8,
+dff=2048. When an encoder is indicated as “Base”, we refer to the “Self-Attention + FeedForward” case. For the multi-encoder Transformer, the number of additional encoders, as well as
+the number of additional layers for each block, depends on the experiment configuration and
+is selected in the following range of values 3, 6, 12, 18. The Static Expansion layer uses the
+following 12 choices of static expansion coefficients { 6, 6, 12, 8, 12, 8, 6, 6, 12, 8, 12, 8 }. The
+choices of these specific coefficients are arbitrarily made and it is out of the scope of this work
+to search for the optimal configuration. All kernels in the ConvS2S layers are of width 3.
+4.3
+Training Details
+Words are split according to the Byte Pair Encoding (BPE) [29], and no lower casing is applied. Adam optimizer (β1 = 0.9, β2 = 0.98, ε = 10−9) and Label Smoothing regularization
+(smoothness γ = 0.1) are adopted. We use the Noam learning rate scheduler as described in
+[31] and 4,000 warm-up steps. Training pairs are sampled without replacement using a target
+length-oriented bucketing until the mini-batch reaches 4,096 words. Finally, models are trained
+up to the number of epochs reported in Table 1.
+4.4
+Evaluation Method
+We evaluate the performances using the BLEU metric [24]. In particular SacreBLEU [27]1. The
+inference algorithm consists of the Beam Search with beam size 4 and in contrast to the standard
+practice, no checkpoint averaging is done since the selection criteria are often time-based and
+lead to different results according to the computational resources.
+1SacreBLEU signature: BLEU + case.mixed + lang.[src-lang]-[dst-lang] + numrefs.1 + smooth.exp + tok.13a +
+version.2.0.0
+
+Encoder
+BLEU
+Base [28]
+31.11
+Base (ours)
+31.13
+LSTM
+29.21
+ConvS2S
+30.95
+Static Exp
+29.40
+FNet
+29.56
+Table 2:
+Single encoder performances on the “En-Vi” test set.
+“Base” denotes the SelfAttention encoder.
+Task
+N
+BLEU
+Gl-En
+
+13.03
+Sp-En
+
+27.22
+Sk-En
+
+27.15
+En-Vi
+
+31.13
+En-It
+
+32.86
+Table 3:
+Baseline scores on the “En-Vi” test set. N represents the number of Transformer
+layers in the baseline.
+
+Results
+5.1
+Single Encoder Performances
+We evaluate the performances of each single encoder strategy by replacing the encoder block in
+the Transformer (with both six encoding and decoding layers) with all five encoding methods in
+the “En-Vi” translation task. This data set is chosen for the analytic experiments throughout
+the rest of the experiments.
+Each single encoder performance is reported in Table 2. Since transformers are sensible to
+hyperparameters and implementation details [23, 26] we show that our baseline achieves a very
+similar performance compared to the ones typically observed in the literature. In the particular
+case of [28] it presents a negligible difference of 0.02 BLEU, paving the way for a fair comparison.
+In the single-encoder case, the baseline model outperforms all the other ones. Table 3 reports the
+baseline performances across all translation tasks. Hence, the Self-Attention method performs
+better than the others in the single-encoder configuration.
+5.2
+Dual-encoder Transformer and Synergy Study
+In Table 4 we show how the Dual-Encoder Transformer performs when the baseline, whose
+encoder is made of Self-Attention layers, is combined with other encoding techniques.
+The
+performance seems to increase proportionally to the number of additional layers M in some
+cases. This is particularly evident in the case of the LSTM whereas the impact of increasing the
+number of layers is less significant in other cases. The number of layers for the models presented
+throughout this work is based on the results in Table 4.
+We observe that combining two encoders does not guarantee the overall system performs at
+
+Encoder
+BLEU
+Base
+31.13
+Base + ConvS2SM=6
+30.34
+Base + ConvS2SM=12
+30.21
+Base + FNetM=6
+29.20
+Base + FNetM=12
+29.38
+Base + Static ExpM=6
+31.51
+Base + Static ExpM=12
+31.73
+Base + LSTMM=6
+29.52
+Base + LSTMM=12
+30.84
+Base + LSTMM=18
+31.22
+Table 4:
+Performances comparison of the dual-encoder Transformer made of the baseline and
+other encoding methods on the “En-Vi” test set.
+Method
+Single-Encoder
+Twin Dual-Encoder (δ)
+Base
+31.13
+30.64 (-0.49)
+LSTM
+29.21
+28.32 (-0.89)
+ConvS2S
+30.95
+30.88 (-0.07)
+Static Exp
+29.40
+29.12 (-0.28)
+FNet
+29.56
+26.51 (-3.05)
+Table 5:
+Twin Dual-Encoder Transformer SacreBLEU scores on the “En-Vi” test set.
+δ
+represents the difference w.r.t the baseline.
+least as well as the single encoder case. All dual-encoders yielded a worse score compared to the
+baseline with the exception of the “Base + LSTMM=18” and “Base + Static ExpM=12” which
+instead scored better with a margin of 0.09 and 0.60 BLEU. This means that such improvements
+are caused by neither the architectural structure nor the increase of parameters alone since
+other instances performed similarly if not worse. This claim is further supported by the poor
+performances reported in Table 5 in which encoders are duplicated and summed together.
+Table 4 also shows that, despite the simplicity of the combination strategy, it is possible
+to design a Dual-Encoder Transformer that performs better than its respective single-encoder
+counterparts. To further investigate this aspect, given the set of encoding methods E={B, L,
+C, S, F} representing the self-attention, LSTM, Static Expansion and FNet respectively, we
+measure the synergy sij ∈R
+between method i and j simply as the performance difference
+between the dual-encoder i + j and the single-encoder made of the method j. The Synergy
+matrix S is reported in Table 6.
+Static Expansion and the LSTM combined well with the Transformer encoder, the latter case
+was expected thanks to the works of [4, 8]. On the contrary, the ConvS2S case contradicts the
+effectiveness observed in literature [33, 35, 7, 16] which highlights the limitations of our trivial
+combination strategy. The pair “Base + FNet” seems to perform the worst.
+
+B
+L
+C
+S
+F
+B
+-0.49
++2.01
+-0.61
++2.33
+-2.19
+L
++0.09
+-0.89
+-0.18
++0.19
+-2.08
+C
+-0.79
++1.56
+-0.07
++0.67
+-1.44
+S
++0.60
++0.38
+-0.88
+-0.28
+-3.39
+F
+-3.76
+-1.73
+-2.83
+-3.23
+-3.05
+Table 6:
+Synergy matrix of dual-encoders on the “En-Vi” test set. For brevity, encoders and
+the number of layers are denoted with letters. B=BaseM=6, L=LSTMM=18, C=ConvS2SM=6,
+S=Static ExpM=12 and F=FNetM=6. Each entry in row i and column j represents the difference
+in terms of BLEU score between the dual encoder i + j and the single encoder performance of
+method j.
+5.3
+Scaling Encoders
+Based on the Synergy matrix reported in Table 6 we increase the number of encoders in the
+Multi-Encoder Transformer and discuss their performances across all data sets.
+To decide which methods are used in the dual and triple encoder configurations, we select the
+top three values of the formula maxi,j∈{1,...,5}{sij+sji} applied on the Synergy matrix reported in
+Table 6. In particular, the top three values are represented by 2.93, 2.10 and 1.38 corresponding
+to “Base + Static ExpM=12”, “Base + LSTMM=18” and “LSTMM=18 + ConvS2SM=6”. For this
+reason, we design the Dual-Encoder as “Base + Static Exp”, the Triple-Encoder is made of
+“Base + Static Exp + LSTM”, the Quadruple-Encoder is made of “Base + Static Exp + LSTM
++ ConvS2S” and the Quintuple-Encoder is made of all encoding methods. The number of layers
+for each additional encoder is configured according to the size of the training set, in particular,
+for “Gl-En” and “Sp-En” we deploy a smaller version of the Multi-Encoder Transformer.
+Several observations can be made from the results reported in Table 7. (i). First of all,
+the Dual-Encoder outperforms the baseline across all data sets of different sizes and languages,
+whereas increasing the number of encoders beyond two leads to mixed results. In particular,
+the performance increase can be appreciated most in the case of two encoders; beyond this case,
+the improvement is smaller if not even worse. This may explain why State-of-the-Art models in
+the literature typically combine two deep learning methods at most. (ii). The Multi-Encoder
+Transformer achieved a maximum increase of 5.35 and 7.16 BLEU in the case of “Gl-En” and
+“Sp-En” respectively, suggesting that richer encoder representations can compensate for the
+lack of data. Therefore, adopting multiple heterogeneous encoders can be a suitable strategy
+for low-resource languages. (iii). In the case of bigger datasets, the Multi-Encoder Transformer
+can be beneficial even though there is no clear relationship between data size and the increase
+in performance. For example, “En-It” and “Sk-En” tasks benefit more from the Dual-Encoder
+configuration compared to “En-Vi” despite having a greater and a smaller number of training
+samples respectively. (iv). The case of the Quintuple-Encoder appears to be the breaking point
+of the benefits of our approach, however, this may be caused by the Fourier Transform method
+not combining well with others rather than a limitation of the scaling method
+Overall, increasing the number of deep learning methods in the encoder can be beneficial
+but results may depend on the application and data size, and Deep Learning practitioners may
+
+Task
+N
+Single
+M
+Dual (δ)
+Q
+Triple (δ)
+U
+Quadruple (δ)
+V
+Quintuple (δ)
+Gl-En
+
+13.03
+
+17.68 (+4.65)
+
+17.83 (+4.80)
+
+18.38 (+5.35)
+
+12.07 (−0.96)
+Sp-En
+
+27.22
+
+33.63 (+6.41)
+
+32.81 (+5.59)
+
+34.38 (+7.16)
+
+30.81 (+3.59)
+Sk-En
+
+27.15
+
+27.96 (+0.81)
+
+27.59 (+0.44)
+
+26.85 (−0.3)
+
+26.62 (−0.53)
+En-Vi
+
+31.13
+
+31.73 (+0.60)
+
+31.71 (+0.58)
+
+30.19 (−0.94)
+
+28.90 (−2.23)
+En-It
+
+32.86
+
+33.78 (+0.92)
+
+33.27 (+0.41)
+
+32.90 (+0.04)
+
+32.03 (−0.83)
+B=Self-Attention, S=Static Expansion, L=LSTM, C=ConvS2S, F=Fourier
+Single=B, Dual=B+S, Triple=B+S+L, Quadruple=B+S+L+C, Quintuple=B+S+L+C+F
+Table 7:
+BLEU scores of the Multi-Encoder Transformer across all translation tasks. N represents the number of Transformer layers. M, Q, U and V represent the number of additional
+Static Expansion layers, LSTM layers, ConvS2S layers and Fourier layers in the Dual-Encoder,
+Triple Encoder, Quadruple and Quintuple Encoder respectively. δ denotes the difference with
+respect to the baseline. The best scores for each translation task are underlined.
+Figure 2: Multi-encoder Transformer performances.
+consider a trade-off between performances and computational cost in case they decide to follow
+this strategy.
+5.4
+Memory and Inference Cost
+Although we removed, wherever possible, the feed-forward layer, the additional encoders inevitably introduce a significant additional computational cost and memory footprint as can
+be seen from Table 8. As a result, the multi-encoder Transformer is increasingly less efficient
+than the single-encoder baseline depending on the number of additional encoders. Fortunately,
+benefits can be observed early in the dual-encoder configuration.
+5.5
+Limitations of the Study
+The performances reported in this work do not necessarily represent the full capabilities of each
+model. We focused only on one configuration of the entire hyperparameter space. In particular,
+
+Model Task
+Single
+Dual
+Triple
+Quadruple
+Quintuple
+ω
+θ
+ω
+θ
+ω
+θ
+ω
+θ
+ω
+θ
+Gl-En, Sp-En
+5.9
+26M
+8.3
+31M
+11.6
+46M
+12.8
+51M
+16.0
+64M
+Sk-En, En-Vi, En-It
+11.8
+48M
+16.7
+61M
+26.4
+99M
+27.6
+109M
+30.8
+135M
+Table 8:
+Number of parameters (denoted with θ) and the number GFLOPS (denoted as ω)
+required by the Multi-Encoder Transformer for the forward step of a sequence of 128 tokens in
+both encoder and decoder.
+we adopted the learning rate scheduler, optimizer, and initialization method of [31] and the same
+batch size is used for most configurations. While such choices are ideal for the Transformer, they
+may not be suitable for all the architectures introduced in this work. The exploration of a variety
+of configurations is often recommended in order to fully appreciate new models. Such fine-tuning
+practice is beyond the scope of the work.
+
+Conclusions
+In this work, we conducted an empirical study of the effectiveness of implementing an encoder
+with an increasing number of heterogeneous Deep learning methods. We considered five Deep
+Learning methods: self-attention, LSTM, convolution, static expansion, and Fourier transform.
+We discovered that the Multi-Encoder Transformer can be an effective architectural design for
+two encoders. However, by increasing the number of encoders beyond two, the impact is limited
+and can be both positive, such as in the case of low-resource languages, and harmful in other
+instances.
+Despite combining different encoders with a simple sum, the Multi-Encoder Transformer,
+particularly the Dual-Encoder configuration, outperformed the baseline across all benchmarks.
+However, connecting more than two encoders resulted in mixed impact. We suspect this might
+be due to the extreme simplicity of our combination method.
+Future works can investigate
+better combining each encoder representation or even formulating an interconnection module
+specifically designed to leverage the diversity of different Deep Learning methods.
