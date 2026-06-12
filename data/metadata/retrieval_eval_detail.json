@@ -1,0 +1,1802 @@
+[
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "what is the mathematical formulation of residual functions with reference to layer inputs?",
+    "difficulty": "easy",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 0.2,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "how do you compute dot product attention scores across different representation subspaces?",
+    "difficulty": "easy",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 0.5,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "what is the specific denoising objective used for sequence to sequence pretraining?",
+    "difficulty": "easy",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "how does the windowing technique reduce data transfer from flash memory?",
+    "difficulty": "easy",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "what is the primary advantage of removing padding tokens during model training?",
+    "difficulty": "easy",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "how does the multi-encoder transformer utilize heterogeneous methods to improve translation?",
+    "difficulty": "easy",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 0.5,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "which architecture drops mlp and attention layers to reduce inference latency?",
+    "difficulty": "easy",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "how does pca compression affect index size in retrieval augmented generation?",
+    "difficulty": "easy",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "what is the main characteristic of the yolo26 end to end architecture?",
+    "difficulty": "easy",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "how does the encoder lstm map input sequences into fixed length representations?",
+    "difficulty": "easy",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "how does skipping attention layers affect performance compared to skipping mlp layers?",
+    "difficulty": "medium",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "why is the combination of different deep learning approaches preferred over homogeneous configurations?",
+    "difficulty": "medium",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "what is the role of denoising autoencoders in modern sequence to sequence models?",
+    "difficulty": "medium",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 0.3333333333333333,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "how do identity shortcuts influence training error in deep convolutional architectures?",
+    "difficulty": "medium",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "can recurrent structures be replaced by attention mechanisms for sequence transduction?",
+    "difficulty": "medium",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "how can memory capacity constraints be managed by accessing external storage during inference?",
+    "difficulty": "medium",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 0.3333333333333333,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "what architectural optimizations lead to faster pretraining in encoder based models?",
+    "difficulty": "medium",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "how are video frame patches used to reconstruct sequences in deep architectures?",
+    "difficulty": "medium",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "is dimensionality reduction via pca feasible for high performance retrieval systems?",
+    "difficulty": "medium",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "what approach allows object detection models to operate without non maximum suppression?",
+    "difficulty": "medium",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "how does the input noise strategy affect the reconstruction quality in transformer models?",
+    "difficulty": "medium",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "are deeper layers always beneficial for model performance during sequence transduction?",
+    "difficulty": "medium",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "how can memory limitations be overcome when deploying extremely deep networks?",
+    "difficulty": "hard",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "does attention based transduction require external memory components to function properly?",
+    "difficulty": "hard",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "what is the impact of heterogeneous encoding strategies on translation BLEU scores?",
+    "difficulty": "hard",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "how does data transfer efficiency relate to the architecture of encoder layers?",
+    "difficulty": "hard",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "is the reconstruction of future video frames equivalent to supervised action recognition?",
+    "difficulty": "hard",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "what is the relationship between dimensionality reduction and retrieval precision in large databases?",
+    "difficulty": "hard",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "are end to end object detection architectures fundamentally different from traditional region based methods?",
+    "difficulty": "hard",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "why do global dependencies in transduction necessitate abandoning recurrence?",
+    "difficulty": "hard",
+    "config": "minilm_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "what is the mathematical formulation of residual functions with reference to layer inputs?",
+    "difficulty": "easy",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "how do you compute dot product attention scores across different representation subspaces?",
+    "difficulty": "easy",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "what is the specific denoising objective used for sequence to sequence pretraining?",
+    "difficulty": "easy",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "how does the windowing technique reduce data transfer from flash memory?",
+    "difficulty": "easy",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "what is the primary advantage of removing padding tokens during model training?",
+    "difficulty": "easy",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how does the multi-encoder transformer utilize heterogeneous methods to improve translation?",
+    "difficulty": "easy",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "which architecture drops mlp and attention layers to reduce inference latency?",
+    "difficulty": "easy",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how does pca compression affect index size in retrieval augmented generation?",
+    "difficulty": "easy",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "what is the main characteristic of the yolo26 end to end architecture?",
+    "difficulty": "easy",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "how does the encoder lstm map input sequences into fixed length representations?",
+    "difficulty": "easy",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how does skipping attention layers affect performance compared to skipping mlp layers?",
+    "difficulty": "medium",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "why is the combination of different deep learning approaches preferred over homogeneous configurations?",
+    "difficulty": "medium",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "what is the role of denoising autoencoders in modern sequence to sequence models?",
+    "difficulty": "medium",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how do identity shortcuts influence training error in deep convolutional architectures?",
+    "difficulty": "medium",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "can recurrent structures be replaced by attention mechanisms for sequence transduction?",
+    "difficulty": "medium",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how can memory capacity constraints be managed by accessing external storage during inference?",
+    "difficulty": "medium",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "what architectural optimizations lead to faster pretraining in encoder based models?",
+    "difficulty": "medium",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how are video frame patches used to reconstruct sequences in deep architectures?",
+    "difficulty": "medium",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "is dimensionality reduction via pca feasible for high performance retrieval systems?",
+    "difficulty": "medium",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "what approach allows object detection models to operate without non maximum suppression?",
+    "difficulty": "medium",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "how does the input noise strategy affect the reconstruction quality in transformer models?",
+    "difficulty": "medium",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "are deeper layers always beneficial for model performance during sequence transduction?",
+    "difficulty": "medium",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 0.2,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "how can memory limitations be overcome when deploying extremely deep networks?",
+    "difficulty": "hard",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "does attention based transduction require external memory components to function properly?",
+    "difficulty": "hard",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 0.5,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "what is the impact of heterogeneous encoding strategies on translation BLEU scores?",
+    "difficulty": "hard",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "how does data transfer efficiency relate to the architecture of encoder layers?",
+    "difficulty": "hard",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 0.3333333333333333,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "is the reconstruction of future video frames equivalent to supervised action recognition?",
+    "difficulty": "hard",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 0.5,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "what is the relationship between dimensionality reduction and retrieval precision in large databases?",
+    "difficulty": "hard",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 0.5,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "are end to end object detection architectures fundamentally different from traditional region based methods?",
+    "difficulty": "hard",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 0.5,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "why do global dependencies in transduction necessitate abandoning recurrence?",
+    "difficulty": "hard",
+    "config": "minilm_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "what is the mathematical formulation of residual functions with reference to layer inputs?",
+    "difficulty": "easy",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "how do you compute dot product attention scores across different representation subspaces?",
+    "difficulty": "easy",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "what is the specific denoising objective used for sequence to sequence pretraining?",
+    "difficulty": "easy",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "how does the windowing technique reduce data transfer from flash memory?",
+    "difficulty": "easy",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "what is the primary advantage of removing padding tokens during model training?",
+    "difficulty": "easy",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "how does the multi-encoder transformer utilize heterogeneous methods to improve translation?",
+    "difficulty": "easy",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "which architecture drops mlp and attention layers to reduce inference latency?",
+    "difficulty": "easy",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "how does pca compression affect index size in retrieval augmented generation?",
+    "difficulty": "easy",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "what is the main characteristic of the yolo26 end to end architecture?",
+    "difficulty": "easy",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 0.5,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "how does the encoder lstm map input sequences into fixed length representations?",
+    "difficulty": "easy",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "how does skipping attention layers affect performance compared to skipping mlp layers?",
+    "difficulty": "medium",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 0.3333333333333333,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "why is the combination of different deep learning approaches preferred over homogeneous configurations?",
+    "difficulty": "medium",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "what is the role of denoising autoencoders in modern sequence to sequence models?",
+    "difficulty": "medium",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 0.5,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "how do identity shortcuts influence training error in deep convolutional architectures?",
+    "difficulty": "medium",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "can recurrent structures be replaced by attention mechanisms for sequence transduction?",
+    "difficulty": "medium",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how can memory capacity constraints be managed by accessing external storage during inference?",
+    "difficulty": "medium",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 0.25,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "what architectural optimizations lead to faster pretraining in encoder based models?",
+    "difficulty": "medium",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how are video frame patches used to reconstruct sequences in deep architectures?",
+    "difficulty": "medium",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "is dimensionality reduction via pca feasible for high performance retrieval systems?",
+    "difficulty": "medium",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "what approach allows object detection models to operate without non maximum suppression?",
+    "difficulty": "medium",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "how does the input noise strategy affect the reconstruction quality in transformer models?",
+    "difficulty": "medium",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "are deeper layers always beneficial for model performance during sequence transduction?",
+    "difficulty": "medium",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "how can memory limitations be overcome when deploying extremely deep networks?",
+    "difficulty": "hard",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "does attention based transduction require external memory components to function properly?",
+    "difficulty": "hard",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 0.3333333333333333,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "what is the impact of heterogeneous encoding strategies on translation BLEU scores?",
+    "difficulty": "hard",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "how does data transfer efficiency relate to the architecture of encoder layers?",
+    "difficulty": "hard",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 0.3333333333333333,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "is the reconstruction of future video frames equivalent to supervised action recognition?",
+    "difficulty": "hard",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 0.5,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "what is the relationship between dimensionality reduction and retrieval precision in large databases?",
+    "difficulty": "hard",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 0.5,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "are end to end object detection architectures fundamentally different from traditional region based methods?",
+    "difficulty": "hard",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 0.25,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "why do global dependencies in transduction necessitate abandoning recurrence?",
+    "difficulty": "hard",
+    "config": "minilm_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "what is the mathematical formulation of residual functions with reference to layer inputs?",
+    "difficulty": "easy",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "how do you compute dot product attention scores across different representation subspaces?",
+    "difficulty": "easy",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "what is the specific denoising objective used for sequence to sequence pretraining?",
+    "difficulty": "easy",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "how does the windowing technique reduce data transfer from flash memory?",
+    "difficulty": "easy",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "what is the primary advantage of removing padding tokens during model training?",
+    "difficulty": "easy",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "how does the multi-encoder transformer utilize heterogeneous methods to improve translation?",
+    "difficulty": "easy",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "which architecture drops mlp and attention layers to reduce inference latency?",
+    "difficulty": "easy",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "how does pca compression affect index size in retrieval augmented generation?",
+    "difficulty": "easy",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 0.5,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "what is the main characteristic of the yolo26 end to end architecture?",
+    "difficulty": "easy",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "how does the encoder lstm map input sequences into fixed length representations?",
+    "difficulty": "easy",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how does skipping attention layers affect performance compared to skipping mlp layers?",
+    "difficulty": "medium",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "why is the combination of different deep learning approaches preferred over homogeneous configurations?",
+    "difficulty": "medium",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "what is the role of denoising autoencoders in modern sequence to sequence models?",
+    "difficulty": "medium",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how do identity shortcuts influence training error in deep convolutional architectures?",
+    "difficulty": "medium",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "can recurrent structures be replaced by attention mechanisms for sequence transduction?",
+    "difficulty": "medium",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how can memory capacity constraints be managed by accessing external storage during inference?",
+    "difficulty": "medium",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "what architectural optimizations lead to faster pretraining in encoder based models?",
+    "difficulty": "medium",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "how are video frame patches used to reconstruct sequences in deep architectures?",
+    "difficulty": "medium",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "is dimensionality reduction via pca feasible for high performance retrieval systems?",
+    "difficulty": "medium",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "what approach allows object detection models to operate without non maximum suppression?",
+    "difficulty": "medium",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "how does the input noise strategy affect the reconstruction quality in transformer models?",
+    "difficulty": "medium",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "are deeper layers always beneficial for model performance during sequence transduction?",
+    "difficulty": "medium",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "how can memory limitations be overcome when deploying extremely deep networks?",
+    "difficulty": "hard",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "does attention based transduction require external memory components to function properly?",
+    "difficulty": "hard",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "what is the impact of heterogeneous encoding strategies on translation BLEU scores?",
+    "difficulty": "hard",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "how does data transfer efficiency relate to the architecture of encoder layers?",
+    "difficulty": "hard",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "is the reconstruction of future video frames equivalent to supervised action recognition?",
+    "difficulty": "hard",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "what is the relationship between dimensionality reduction and retrieval precision in large databases?",
+    "difficulty": "hard",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "are end to end object detection architectures fundamentally different from traditional region based methods?",
+    "difficulty": "hard",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "why do global dependencies in transduction necessitate abandoning recurrence?",
+    "difficulty": "hard",
+    "config": "bge_small_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "what is the mathematical formulation of residual functions with reference to layer inputs?",
+    "difficulty": "easy",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "how do you compute dot product attention scores across different representation subspaces?",
+    "difficulty": "easy",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "what is the specific denoising objective used for sequence to sequence pretraining?",
+    "difficulty": "easy",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 0.5,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "how does the windowing technique reduce data transfer from flash memory?",
+    "difficulty": "easy",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 0.5,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "what is the primary advantage of removing padding tokens during model training?",
+    "difficulty": "easy",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how does the multi-encoder transformer utilize heterogeneous methods to improve translation?",
+    "difficulty": "easy",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "which architecture drops mlp and attention layers to reduce inference latency?",
+    "difficulty": "easy",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how does pca compression affect index size in retrieval augmented generation?",
+    "difficulty": "easy",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "what is the main characteristic of the yolo26 end to end architecture?",
+    "difficulty": "easy",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "how does the encoder lstm map input sequences into fixed length representations?",
+    "difficulty": "easy",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how does skipping attention layers affect performance compared to skipping mlp layers?",
+    "difficulty": "medium",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "why is the combination of different deep learning approaches preferred over homogeneous configurations?",
+    "difficulty": "medium",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "what is the role of denoising autoencoders in modern sequence to sequence models?",
+    "difficulty": "medium",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how do identity shortcuts influence training error in deep convolutional architectures?",
+    "difficulty": "medium",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "can recurrent structures be replaced by attention mechanisms for sequence transduction?",
+    "difficulty": "medium",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how can memory capacity constraints be managed by accessing external storage during inference?",
+    "difficulty": "medium",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "what architectural optimizations lead to faster pretraining in encoder based models?",
+    "difficulty": "medium",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how are video frame patches used to reconstruct sequences in deep architectures?",
+    "difficulty": "medium",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "is dimensionality reduction via pca feasible for high performance retrieval systems?",
+    "difficulty": "medium",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "what approach allows object detection models to operate without non maximum suppression?",
+    "difficulty": "medium",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "how does the input noise strategy affect the reconstruction quality in transformer models?",
+    "difficulty": "medium",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 0.5,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "are deeper layers always beneficial for model performance during sequence transduction?",
+    "difficulty": "medium",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "how can memory limitations be overcome when deploying extremely deep networks?",
+    "difficulty": "hard",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "does attention based transduction require external memory components to function properly?",
+    "difficulty": "hard",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "what is the impact of heterogeneous encoding strategies on translation BLEU scores?",
+    "difficulty": "hard",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "how does data transfer efficiency relate to the architecture of encoder layers?",
+    "difficulty": "hard",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "is the reconstruction of future video frames equivalent to supervised action recognition?",
+    "difficulty": "hard",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 0.5,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "what is the relationship between dimensionality reduction and retrieval precision in large databases?",
+    "difficulty": "hard",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "are end to end object detection architectures fundamentally different from traditional region based methods?",
+    "difficulty": "hard",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "why do global dependencies in transduction necessitate abandoning recurrence?",
+    "difficulty": "hard",
+    "config": "bge_large_fixed"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "what is the mathematical formulation of residual functions with reference to layer inputs?",
+    "difficulty": "easy",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how do you compute dot product attention scores across different representation subspaces?",
+    "difficulty": "easy",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "what is the specific denoising objective used for sequence to sequence pretraining?",
+    "difficulty": "easy",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "how does the windowing technique reduce data transfer from flash memory?",
+    "difficulty": "easy",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "what is the primary advantage of removing padding tokens during model training?",
+    "difficulty": "easy",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how does the multi-encoder transformer utilize heterogeneous methods to improve translation?",
+    "difficulty": "easy",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "which architecture drops mlp and attention layers to reduce inference latency?",
+    "difficulty": "easy",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "how does pca compression affect index size in retrieval augmented generation?",
+    "difficulty": "easy",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "what is the main characteristic of the yolo26 end to end architecture?",
+    "difficulty": "easy",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how does the encoder lstm map input sequences into fixed length representations?",
+    "difficulty": "easy",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how does skipping attention layers affect performance compared to skipping mlp layers?",
+    "difficulty": "medium",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "why is the combination of different deep learning approaches preferred over homogeneous configurations?",
+    "difficulty": "medium",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "what is the role of denoising autoencoders in modern sequence to sequence models?",
+    "difficulty": "medium",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 0.5,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "how do identity shortcuts influence training error in deep convolutional architectures?",
+    "difficulty": "medium",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "can recurrent structures be replaced by attention mechanisms for sequence transduction?",
+    "difficulty": "medium",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how can memory capacity constraints be managed by accessing external storage during inference?",
+    "difficulty": "medium",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "what architectural optimizations lead to faster pretraining in encoder based models?",
+    "difficulty": "medium",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "how are video frame patches used to reconstruct sequences in deep architectures?",
+    "difficulty": "medium",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "is dimensionality reduction via pca feasible for high performance retrieval systems?",
+    "difficulty": "medium",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "what approach allows object detection models to operate without non maximum suppression?",
+    "difficulty": "medium",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "how does the input noise strategy affect the reconstruction quality in transformer models?",
+    "difficulty": "medium",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 0.2,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "are deeper layers always beneficial for model performance during sequence transduction?",
+    "difficulty": "medium",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 0.3333333333333333,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.2,
+    "query": "how can memory limitations be overcome when deploying extremely deep networks?",
+    "difficulty": "hard",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "does attention based transduction require external memory components to function properly?",
+    "difficulty": "hard",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "what is the impact of heterogeneous encoding strategies on translation BLEU scores?",
+    "difficulty": "hard",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 0.0,
+    "recall@3": 0,
+    "precision@3": 0.0,
+    "recall@5": 0,
+    "precision@5": 0.0,
+    "query": "how does data transfer efficiency relate to the architecture of encoder layers?",
+    "difficulty": "hard",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 0.8,
+    "query": "is the reconstruction of future video frames equivalent to supervised action recognition?",
+    "difficulty": "hard",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 0.3333333333333333,
+    "recall@3": 1,
+    "precision@3": 0.3333333333333333,
+    "recall@5": 1,
+    "precision@5": 0.4,
+    "query": "what is the relationship between dimensionality reduction and retrieval precision in large databases?",
+    "difficulty": "hard",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 1.0,
+    "recall@5": 1,
+    "precision@5": 1.0,
+    "query": "are end to end object detection architectures fundamentally different from traditional region based methods?",
+    "difficulty": "hard",
+    "config": "bge_semantic"
+  },
+  {
+    "mrr": 1.0,
+    "recall@3": 1,
+    "precision@3": 0.6666666666666666,
+    "recall@5": 1,
+    "precision@5": 0.6,
+    "query": "why do global dependencies in transduction necessitate abandoning recurrence?",
+    "difficulty": "hard",
+    "config": "bge_semantic"
+  }
+]
