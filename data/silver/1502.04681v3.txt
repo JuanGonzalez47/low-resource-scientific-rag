@@ -62,7 +62,6 @@ Note that all Wc• matrices are diagonal, whereas the rest are dense. The key a
 
 In this section, we describe a model that uses Recurrent Neural Nets (RNNs) made of LSTM units to do unsuper-
 
------ Start of picture text -----<br>
 Learned v ˆ3 v ˆ2 v ˆ1<br>Representation<br>W 1 W 1 copy W 2 W 2<br>v 1 v 2 v 3 v 3 v 2<br>Figure 2. LSTM Autoencoder Model
 
 vised learning. The model consists of two RNNs – the encoder LSTM and the decoder LSTM as shown in Fig. 2. The input to the model is a sequence of vectors (image patches or features). The encoder LSTM reads in this sequence. After the last input has been read, the decoder LSTM takes over and outputs a prediction for the target sequence. The target sequence is same as the input sequence, but in reverse order. Reversing the target sequence makes the optimization easier because the model can get off the ground by looking at low range correlations. This is also inspired by how lists are represented in LISP. The encoder can be seen as creating a list by applying the cons function on the previously constructed list and the new input. The decoder essentially unrolls this list, with the hidden to output weights extracting the element at the top of the list (car function) and the hidden to hidden weights extracting the rest of the list (cdr function). Therefore, the first element out is the last element in.
@@ -75,7 +74,6 @@ The state of the encoder LSTM after the last input has been read is the represen
 
 Unsupervised Learning with LSTMs
 
------ Start of picture text -----<br>
 Learned v ˆ4 v ˆ5 v ˆ6<br>Representation<br>W 1 W 1 copy W 2 W 2<br>v 1 v 2 v 3 v 4 v 5
 
 Figure 3. LSTM Future Predictor Model
@@ -94,7 +92,6 @@ In order to predict the next few frames correctly, the model needs information a
 
 For each of these two models, we can consider two possibilities - one in which the decoder LSTM is conditioned on the last generated frame and the other in which it is not. In the experimental section, we explore these choices quantitatively. Here we briefly discuss arguments for and against a conditional decoder. A strong argument in favour of using a conditional decoder is that it allows the decoder to model multiple modes in the target sequence distribution. Without that, we would end up averaging the multiple modes in the low-level input space. However, this is an issue only if we expect multiple modes in the target sequence distribution. For the LSTM Autoencoder, there is only one correct
 
------ Start of picture text -----<br>
 Input Reconstruction v ˆ3 v ˆ2 v ˆ1<br>W 2 W 2<br>Learned<br>Representation copy<br>v 3 v 2<br>W 1 W 1<br>v ˆ4 v ˆ5 v ˆ6<br>copy<br>v 1 v 2 v 3<br>W 3 W 3<br>Sequence of Input Frames<br>Future Prediction v 4 v 5
 
 Figure 4. The Composite Model: The LSTM predicts the future as well as the input sequence.
@@ -187,10 +184,8 @@ Fig. 10 shows the output features from the two LSTM decoders of a Composite Mode
 
 The aim of this set of experiments is to see if the features learned by unsupervised learning can help improve perfor-
 
-Unsupervised Learning with LSTMs----- Start of picture text -----<br>
-(a) Trained Future Predictor
+Unsupervised Learning with LSTMs(a) Trained Future Predictor
 
------ Start of picture text -----<br>
 0 Input Gates 0 Forget Gates 0 Input 0 Output Gates 0 Cell States 0 Output<br>50 50 50 50 50 50<br>100 100 100 100 100 100<br>150 150 150 150 150 150<br>0 20 40 60 80 0 20 40 60 80 0 20 40 60 80 0 20 40 60 80 0 20 40 60 80 0 20 40 60 80<br>(b) Randomly Initialized Future Predictor
 
 Figure 7. Pattern of activity in 200 randomly chosen LSTM units in the Future Predictor of a 1 layer (unconditioned) Composite Model trained on moving MNIST digits. The vertical axis corresponds to different LSTM units. The horizontal axis is time. The model was only trained to predict the next 10 frames, but here we let it run to predict the next 100 frames. Top : The dynamics has a periodic quality which does not die out. Bottom : The pattern of activity, if the trained weights in the future predictor are replaced by random weights. The dynamics quickly dies out.
@@ -203,23 +198,19 @@ The baseline for comparing these models is an identical LSTM classifier but with
 
 not through time within the same LSTM as proposed in Zaremba et al. (2014). We emphasize that this is a very strong baseline and does significantly better than just using single frames. Using dropout was crucial in order to train good baseline models especially with very few training examples.
 
------ Start of picture text -----<br>
 y 1 y 2 . . . yT<br>W [(2)] W [(2)] W [(2)]<br>. . .<br>W [(1)] W [(1)] W [(1)]<br>. . .<br>v 1 v 2 . . . vT
 
 Figure 11. LSTM Classifier.
 
 Unsupervised Learning with LSTMs
 
------ Start of picture text -----<br>
 Input Sequence - Ground Truth Future -<br>Input Reconstruction - Future Prediction -
 
 Figure 8. Out-of-domain runs. Reconstruction and Future prediction for test sequences of one and three moving digits. The model was trained on sequences of two moving digits.
 
------ Start of picture text -----<br>
 (a) Inputs (b) Input Gates<br>(c) Forget Gates (d) Output Gates
 
-Figure 9. Input features from a Composite Model trained on moving MNIST digits. In an LSTM, each input frame is connected to four sets of units - the input, the input gate, forget gate and output gate. These figures show the top-200 features ordered by L 2 norm of the input features. The features in corresponding locations belong to the same LSTM unit.----- Start of picture text -----<br>
-(a) Input Reconstruction (b) Future Prediction
+Figure 9. Input features from a Composite Model trained on moving MNIST digits. In an LSTM, each input frame is connected to four sets of units - the input, the input gate, forget gate and output gate. These figures show the top-200 features ordered by L 2 norm of the input features. The features in corresponding locations belong to the same LSTM unit.(a) Input Reconstruction (b) Future Prediction
 
 Figure 10. Output features from the two decoder LSTMs of a Composite Model trained on moving MNIST digits. These figures show the top-200 features ordered by L 2 norm.
 
@@ -251,7 +242,6 @@ On RGB data, our model performs at par with the best deep
 
 Unsupervised Learning with LSTMs
 
------ Start of picture text -----<br>
 80 50<br>45<br>70<br>40<br>60 35<br>30<br>50<br>25<br>40 20<br>Single Frame 15 Single Frame<br>30 LSTM LSTM<br>10<br>LSTM + Pretraining LSTM + Pretraining<br>20 5<br>1 2 4 10 20 50 100 1 2 4 8 16 32 64<br>Training Examples per class Training Examples per class<br>(a) UCF-101 RGB (b) HMDB-51 RGB<br>Classification Accuracy Classification Accuracy
 
 Figure 12. Effect of pretraining on action recognition with change in the size of the labelled training set. The error bars are over 10 different samples of training sets.

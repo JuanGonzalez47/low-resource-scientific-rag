@@ -1,41 +1,41 @@
 [
   {
     "strategy": "A \u2014 Small Fixed (100 tok)",
-    "total_chunks": 1515,
-    "tokens_mean": 99.6,
+    "total_chunks": 1107,
+    "tokens_mean": 99.7,
     "tokens_median": 100,
-    "tokens_stdev": 5.4,
-    "tokens_min": 7,
+    "tokens_stdev": 4.1,
+    "tokens_min": 10,
     "tokens_max": 100,
-    "pct_with_equation": 1.5,
+    "pct_with_equation": 0.6,
     "pct_eq_complete": 0.0,
     "pct_truncated": 0.0,
-    "pct_short": 0.3
+    "pct_short": 0.1
   },
   {
     "strategy": "B \u2014 Large Fixed (300 tok)",
-    "total_chunks": 595,
-    "tokens_mean": 253.9,
-    "tokens_median": 256,
-    "tokens_stdev": 18.5,
-    "tokens_min": 14,
+    "total_chunks": 436,
+    "tokens_mean": 253.3,
+    "tokens_median": 256.0,
+    "tokens_stdev": 20.6,
+    "tokens_min": 9,
     "tokens_max": 256,
     "pct_with_equation": 0.0,
     "pct_eq_complete": 0.0,
     "pct_truncated": 0.0,
-    "pct_short": 0.2
+    "pct_short": 0.5
   },
   {
     "strategy": "C \u2014 Semantic",
-    "total_chunks": 791,
-    "tokens_mean": 171.7,
-    "tokens_median": 213,
-    "tokens_stdev": 82.4,
-    "tokens_min": 2,
+    "total_chunks": 971,
+    "tokens_mean": 102.3,
+    "tokens_median": 90,
+    "tokens_stdev": 53.7,
+    "tokens_min": 3,
     "tokens_max": 256,
-    "pct_with_equation": 18.1,
-    "pct_eq_complete": 83.9,
+    "pct_with_equation": 4.0,
+    "pct_eq_complete": 5.1,
     "pct_truncated": 0.0,
-    "pct_short": 4.6
+    "pct_short": 1.6
   }
 ]
