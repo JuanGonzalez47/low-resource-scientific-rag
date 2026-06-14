@@ -2,6 +2,8 @@
 
 Low-resource RAG system for scientific literature. Bi-encoder retrieval + cross-encoder reranking, running entirely on CPU.
 
+https://github.com/user-attachments/assets/ba369699-7753-49e3-8dc6-c62aa1e84bc9
+
 ## Results
 
 | Config | MRR | Recall@5 | Precision@5 | Hard MRR |
@@ -94,12 +96,12 @@ streamlit run app/streamlit_app.py
 
 ## Models
 
-| Component | Model | Params |
-|-----------|-------|--------|
-| Embedding | `sentence-transformers/all-MiniLM-L6-v2` | 80M |
-| Embedding | `BAAI/bge-small-en-v1.5` | 133M |
-| Reranker | `ms-marco-MiniLM-L-6-v2` | 22M |
-| LLM | `qwen2.5:1.5b` (Ollama) | 1.5B |
+| Component | Model |
+|-----------|-------|
+| Embedding | `sentence-transformers/all-MiniLM-L6-v2` |
+| Embedding | `BAAI/bge-small-en-v1.5` |
+| Reranker | `ahmedfarazsyk/ms-marco-MiniLM-L6-v2-finetuned-scidocs` |
+| LLM | `qwen2.5:1.5b` (Ollama) |
 
 ## Benchmark
 
